@@ -11,12 +11,32 @@
 </head>
 
 <body>
-  <header class="fixed-top"></header>
+  <header class="fixed-top">
+  </header>
   <main>
-    <form>
-      <input type="text" autocomplete="off" />
-      <button type="submit">SEND</button>
-    </form>
+    <div class="container">
+      <div class="parent-container"> <!-- flex -->
+        <div class="left-container">
+          <div class="card card-body"></div>
+        </div>
+        <div class="right-container">
+          <div class="card card-chat"> <!-- flex -->
+            <div class="card-body">
+            </div>
+            <div class="card-footer">
+              <div class="align-items-end"> <!-- flex-->
+                <textarea rows="1" autocomplete="off" autocorrect="off" spellcheck="false" name="message"
+                  placeholder="Message here..."></textarea>
+                <div>
+                  <button type="submit">SEND</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
   </main>
 </body>
 
