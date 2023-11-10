@@ -121,6 +121,11 @@ header.fixed-top+main {
   gap: 10px;
 }
 
+.end-item {
+  flex: 1;
+  flex-grow: 0;
+}
+
 button {
   background-color: var(--light-bg);
   border-radius: 0.25rem;
@@ -143,12 +148,19 @@ button:disabled {
   opacity: 0.5;
 }
 
+i.ws {
+  content: url("assets/images/websocket.svg");
+  display: inline-block;
+  height: 2rem;
+}
+
 textarea {
   background-color: var(--dark-bg);
   border-radius: 0.25rem;
   border: 1px solid #313235;
   color: var(--gray-100);
   display: inline-block;
+  flex: 7;
   font-size: 16px;
   line-height: normal;
   max-height: 80px;
