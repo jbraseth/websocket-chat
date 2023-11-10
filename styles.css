@@ -2,7 +2,8 @@
   --border-color: #202227;
   --dark-bg: #191a1f;
   --fixed-header-padding: calc(var(--gutter) + var(--header-height));
-  --gray: #ffffffb3;
+  --gray-100: #ffffffb3;
+  --gray-200: #c5c6cc;
   --gutter: 1.5rem;
   --header-bg: #0f0f10;
   --header-height: 56px;
@@ -121,14 +122,32 @@ header.fixed-top+main {
 }
 
 button {
+  background-color: var(--light-bg);
+  border-radius: 0.25rem;
+  border: 1px solid #313235;
+  color: var(--gray-200);
   font-family: Roboto, Helvetica, sans-serif;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--gray-200);
+  color: var(--light-bg);
+}
+
+button:disabled {
+  background-color: var(--light-bg);
+  color: #666666;
+  cursor: not-allowed;
+  opacity: 0.5;
 }
 
 textarea {
   background-color: var(--dark-bg);
   border-radius: 0.25rem;
   border: 1px solid #313235;
-  color: var(--gray);
+  color: var(--gray-100);
   display: inline-block;
   font-size: 16px;
   line-height: normal;
