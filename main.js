@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
+  let socket = new WebSocket("ws://localhost:3000")
+
   const messageInput = document.querySelector("textarea[name='message-input']");
   const sendButton = document.querySelector("button[name='message-button']");
 
@@ -16,7 +18,6 @@ document.addEventListener("DOMContentLoaded", function () {
       event.preventDefault();
       if (this.value.trim()) {
         sendMessage(this.value.trim());
-        triggerButtonHoverEffect();
       }
     }
   });
@@ -25,7 +26,6 @@ document.addEventListener("DOMContentLoaded", function () {
   sendButton.addEventListener("click", function () {
     if (messageInput.value.trim()) {
       sendMessage(messageInput.value.trim());
-      triggerButtonHoverEffect();
     }
   });
 
@@ -62,12 +62,5 @@ document.addEventListener("DOMContentLoaded", function () {
   function getCurrentTime() {
     const now = new Date();
     return now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-  }
-
-  function triggerButtonHoverEffect() {
-    sendButton.classList.add("hover-effect");
-    setTimeout(() => {
-      sendButton.classList.remove("hover-effect");
-    }, 1000); // Remove the effect after 1 second
   }
 });
