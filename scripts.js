@@ -39,14 +39,4 @@ document.addEventListener("DOMContentLoaded", function () {
       this.style.overflowY = "hidden";
     }
   });
-
-  const sendButton = document.querySelector("button");
-
-  // Disable the send button initially
-  sendButton.disabled = true;
-
-  // Enable or disable send button based on textarea content
-  textarea.addEventListener("input", function () {
-    sendButton.disabled = !this.value.trim();
-  });
 });
