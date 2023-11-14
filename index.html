@@ -2,12 +2,19 @@
 <html lang="en">
 
 <head>
+  <title>WebSocket Chat</title>
+
+  <!-- Meta Tags -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="assets/images/favicon.ico">
   <link rel="stylesheet" href="styles.css">
-  <script defer src="chat.js"></script>
-  <title>WebSocket Chat</title>
+  <script src="chat.js" defer></script>
+
+  <!-- Vendors -->
+  <link type="text/css" href="assets/vendor/OverlayScrollbars/css/OverlayScrollbars.css" rel="stylesheet" />
+  <script type="text/javascript" src="assets/vendor/OverlayScrollbars/js/OverlayScrollbars.js" defer></script>
+
 </head>
 
 <body>
@@ -15,13 +22,94 @@
   </header>
   <main>
     <div class="container">
-      <div class="parent-container"> <!-- flex -->
+      <div class="parent-container">
         <div class="left-container">
-          <div class="card card-body"></div>
+          <div class="card card-body h-100"></div>
         </div>
         <div class="right-container">
-          <div class="card card-chat"> <!-- flex -->
-            <div class="card-body">
+          <div class="card card-chat h-100">
+            <div class="card-body h-100">
+              <div class="chat-content h-100 custom-scrollbar">
+                <!-- Messages -->
+                <div class="w-100">
+                  <div class="d-flex-col align-items-start">
+                    <div class="message message-secondary">Lorem ipsum dolor sit amet.</div>
+                    <div class="timestamp">9:38 AM</div>
+                  </div>
+                  <div class="d-flex-col align-items-end">
+                    <div class="message message-primary">Lorem ipsum dolor sit amet.</div>
+                    <div class="timestamp">9:41 AM</div>
+                  </div>
+                  <div class="d-flex-col align-items-start">
+                    <div class="message message-secondary">Lorem ipsum dolor sit amet.</div>
+                    <div class="timestamp">9:38 AM</div>
+                  </div>
+                  <div class="d-flex-col align-items-end">
+                    <div class="message message-primary">Lorem ipsum dolor sit amet.</div>
+                    <div class="timestamp">9:41 AM</div>
+                  </div>
+                  <div class="d-flex-col align-items-start">
+                    <div class="message message-secondary">Lorem ipsum dolor sit amet.</div>
+                    <div class="timestamp">9:38 AM</div>
+                  </div>
+                  <div class="d-flex-col align-items-end">
+                    <div class="message message-primary">Lorem ipsum dolor sit amet.</div>
+                    <div class="timestamp">9:41 AM</div>
+                  </div>
+                </div>
+                <div class="w-100">
+                  <div class="d-flex-col align-items-start">
+                    <div class="message message-secondary">Lorem ipsum dolor sit amet.</div>
+                    <div class="timestamp">9:38 AM</div>
+                  </div>
+                  <div class="d-flex-col align-items-end">
+                    <div class="message message-primary">Lorem ipsum dolor sit amet.</div>
+                    <div class="timestamp">9:41 AM</div>
+                  </div>
+                  <div class="d-flex-col align-items-start">
+                    <div class="message message-secondary">Lorem ipsum dolor sit amet.</div>
+                    <div class="timestamp">9:38 AM</div>
+                  </div>
+                  <div class="d-flex-col align-items-end">
+                    <div class="message message-primary">Lorem ipsum dolor sit amet.</div>
+                    <div class="timestamp">9:41 AM</div>
+                  </div>
+                  <div class="d-flex-col align-items-start">
+                    <div class="message message-secondary">Lorem ipsum dolor sit amet.</div>
+                    <div class="timestamp">9:38 AM</div>
+                  </div>
+                  <div class="d-flex-col align-items-end">
+                    <div class="message message-primary">Lorem ipsum dolor sit amet.</div>
+                    <div class="timestamp">9:41 AM</div>
+                  </div>
+                </div>
+                <div class="w-100">
+                  <div class="d-flex-col align-items-start">
+                    <div class="message message-secondary">Lorem ipsum dolor sit amet.</div>
+                    <div class="timestamp">9:38 AM</div>
+                  </div>
+                  <div class="d-flex-col align-items-end">
+                    <div class="message message-primary">Lorem ipsum dolor sit amet.</div>
+                    <div class="timestamp">9:41 AM</div>
+                  </div>
+                  <div class="d-flex-col align-items-start">
+                    <div class="message message-secondary">Lorem ipsum dolor sit amet.</div>
+                    <div class="timestamp">9:38 AM</div>
+                  </div>
+                  <div class="d-flex-col align-items-end">
+                    <div class="message message-primary">Lorem ipsum dolor sit amet.</div>
+                    <div class="timestamp">9:41 AM</div>
+                  </div>
+                  <div class="d-flex-col align-items-start">
+                    <div class="message message-secondary">Lorem ipsum dolor sit amet.</div>
+                    <div class="timestamp">9:38 AM</div>
+                  </div>
+                  <div class="d-flex-col align-items-end">
+                    <div class="message message-primary">Lorem ipsum dolor sit amet.</div>
+                    <div class="timestamp">9:41 AM</div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="card-footer">
               <div class="align-items-end"> <!-- flex-->

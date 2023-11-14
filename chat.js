@@ -1,4 +1,30 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // Custom Scrollbar Initialization
+  if (typeof OverlayScrollbars !== 'undefined') {
+    OverlayScrollbars(document.querySelectorAll('.custom-scrollbar'), {
+        resize: "none",
+        scrollbars: {
+            autoHide: 'leave',
+            autoHideDelay: 200
+        },
+        overflowBehavior: {
+            x: "visible-hidden",
+            y: "scroll"
+        }
+    });
+
+    OverlayScrollbars(document.querySelectorAll('.custom-scrollbar-y'), {
+        resize: "none",
+        scrollbars: {
+            autoHide: 'leave',
+            autoHideDelay: 200
+        },
+        overflowBehavior: {
+            x: "scroll",
+            y: "scroll"
+        }
+    });
+  }
   const textarea = document.querySelector("textarea");
 
   // Adjust textarea height and handle overflow
