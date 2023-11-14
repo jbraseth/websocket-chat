@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>javascript.info WebSocket Examples</title>
+</head>
+<body>
+  <script>
+    let ws = new WebSocket("wss://javascript.info/article/websocket/demo/hello")
+
+    ws.onopen = function(e) {
+      alert("[open] Connection established");
+      alert("Sending to server");
+      ws.send("My name is John");
+    };
+
+    ws.onmessage = function(event) {
+      alert(`[message] Data received from server: ${event.data}`);
+    };
+
+    ws.onclose = function(event) {
+      if (event.wasClean) {
+        alert(`[close] Connection closed cleanly, code=${event.code} reason=${event.reason}`);
+      } else {
+        alert('[close] Connection died');
+      }
+    };
+
+    ws.onerror = function(error) {
+      alert(`[error]`);
+    };
+  </script>
+</body>
+</html>
